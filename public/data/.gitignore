@@ -1,0 +1,3 @@
+# Don't commit user data backups - they contain sensitive information
+*.json
+!README.md
