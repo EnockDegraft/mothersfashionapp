@@ -47,14 +47,12 @@ export default function UsersPage() {
   const [isExporting, setIsExporting] = useState(false)
   const [exportMessage, setExportMessage] = useState<string | null>(null)
 
-  // Form states
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
   const [role, setRole] = useState<'admin' | 'sales_personnel'>('sales_personnel')
 
-  // Load users from localStorage
   useEffect(() => {
     const storedUsers = localStorage.getItem('mcUsers')
     if (storedUsers) {
